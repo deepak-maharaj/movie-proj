@@ -1,0 +1,50 @@
+<div class="container">
+<style>.theater-table tr td{padding:5px;}.theater-table td{border:1px solid #333;}select{width:100%;}</style>
+  <table class="theater-table" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td>Theater Name</td>  <td><input type="text" ng-model="theater.theaterName"/></td>
+      </tr>
+      <tr>
+        <td>City Nme </td> 
+        <td><select ng-model="theater.cityName" >
+  <option ng-repeat=" x in cityData" value="{{x.CityName}}">{{x.CityName}}</option>
+</select></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><button ng-click="Savetheater()">Submit</button>
+<button ng-click="Edittheater()">Update</button></td>
+          </tr></table><br>
+
+<!--<select ng-model="theater.cityName" ng-options="x.CityName for x in cityData">
+</select>-->
+
+<!--<p>
+{{theater}}
+</p>-->
+
+<div>
+
+
+<!--<ul>
+    <li ng-repeat="k in theaterData">{{k.theaterName}}  -  {{k.cityName}} </li>
+</ul>-->
+
+<table class="theater-table" cellpadding="0" cellspacing="5" border="0">
+  <tr>
+    <th>Theater Name</th>
+    <th>City Name</th>
+    <th>Time</th>
+    <th colspan="2"></th>
+  </tr>
+  <tr ng-repeat="k in theaterData">
+    <td>{{k.theaterName}}</td>
+    <td>{{k.cityName}}</td>
+    <td> ...time ... </td>
+    <td><button ng-click="SetEdittheater(k)">Edit Movie</button>  </td>
+    <td><button ng-click="Deletetheater(k)">Remove Movie</button></td>
+  </tr>
+</table>
+
+
+</div>
+</div>

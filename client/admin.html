@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="/build/bundle.js">
+  </script>
+  <title>Document</title>
+  <link href="public/css/style.css" rel="stylesheet">
+ 
+  <style>body{background:#ccc;}</style>
+</head>
+<body>
+  <div class="mnd">
+  <h3>This is Master Page</h3>
+  <div class="maind">
+  <a href="#/">Home</a>
+  <a href="#/city">City</a>
+  <a href="#/time">Time</a>
+  <a href="#/theater">Theater</a>
+  <a href="#/movie">Oder</a>
+  <a href="#/create">Add Movie</a>
+  </div>
+  <div class="main2">
+  <div ng-view></div>
+  </div>
+  </div>
+</body>
+</html>
+

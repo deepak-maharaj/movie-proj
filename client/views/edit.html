@@ -1,0 +1,23 @@
+MovieName<input type="text" ng-model="Movie.MovieName"/><br/><br/>
+Genre<input type="text" ng-model="Movie.Genre"/><br/><br/>
+Language<input type="text" ng-model="Movie.Language"/><br/><br/>
+Duration<input type="text" ng-model="Movie.Duration"/><br/><br/>
+<button ng-click="EditMovie()">Submit</button>
+
+
+<table>
+  <tr>
+    <th>Movie Name</th>
+    <th>Genre</th>
+    <th>Language</th>
+    <th>Duration</th>
+  </tr>
+  <tr ng-repeat="x in movieData">
+    <td>{{x.MovieName}}</td>
+    <td>{{x.Genre}}</td>
+    <td>{{x.Language}}</td>
+    <td>{{x.Duration}}</td>
+    <td><button ng-click="SetEditMovie(x)">Edit Movie</button></td>
+  </tr>
+</table>
+
